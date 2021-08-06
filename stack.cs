@@ -4,10 +4,10 @@ using System.Text;
 
 namespace StackandQueue
 {
-    class Stack
+    class stack
     {
         private Node top;
-        public Stack()
+        public stack()
         {
             this.top = null;
         }
@@ -34,7 +34,6 @@ namespace StackandQueue
                 temp = temp.next;
             }
         }
-        
         public void Peek()
         {
             if (top == null)
@@ -44,7 +43,6 @@ namespace StackandQueue
             }
             Console.WriteLine("{0} is Peek element of Stack", top.data);
         }
-        
         public void Pop()
         {
             if (top == null)
