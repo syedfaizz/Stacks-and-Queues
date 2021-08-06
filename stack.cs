@@ -7,7 +7,7 @@ namespace StackandQueue
     class Stack
     {
         private Node top;
-        public LinkedListStack()
+        public Stack()
         {
             this.top = null;
         }
