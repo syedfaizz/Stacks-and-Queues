@@ -7,16 +7,11 @@ namespace StackandQueue
     class Stack
     {
         private Node top;
-        /// <summary>
-        /// constructor is used to initialized the top.
-        /// </summary>
         public LinkedListStack()
         {
             this.top = null;
         }
-        /// <summary>
-        /// add element into stack.
-        /// </summary>
+       
         public void Push(int value)
         {
             Node node = new Node(value);
@@ -26,10 +21,7 @@ namespace StackandQueue
                 node.next = this.top;
             this.top = node;
             Console.WriteLine("{0} pushed to stack", value);
-        }
-        /// <summary>
-        /// display the stack elements.
-        /// </summary>
+        } 
         public void Display()
         {
             Node temp = this.top;
