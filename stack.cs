@@ -7,16 +7,10 @@ namespace StackandQueue
     class Stack
     {
         private Node top;
-        /// <summary>
-        /// constructor is used to initialized the top.
-        /// </summary>
-        public LinkedListStack()
+        public Stack()
         {
             this.top = null;
         }
-        /// <summary>
-        /// add element into stack.
-        /// </summary>
         public void Push(int value)
         {
             Node node = new Node(value);
@@ -27,9 +21,6 @@ namespace StackandQueue
             this.top = node;
             Console.WriteLine("{0} pushed to stack", value);
         }
-        /// <summary>
-        /// display the stack elements.
-        /// </summary>
         public void Display()
         {
             Node temp = this.top;
@@ -41,6 +32,40 @@ namespace StackandQueue
             {
                 Console.WriteLine(temp.data + " ");
                 temp = temp.next;
+            }
+        }
+        
+        public void Peek()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} is Peek element of Stack", top.data);
+        }
+        
+        public void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} is Poped from the Stack", top.data);
+            top = top.next;
+        }
+        public void ISEmpty()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            while (top != null)
+            {
+                Peek();
+                Pop();
             }
         }
     }
